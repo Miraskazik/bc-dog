@@ -2,8 +2,8 @@ package cz.rb.bcdog.domain.mapper;
 
 import cz.rb.bcdog.domain.repository.entity.DogEntity;
 import cz.rb.bcdog.model.Dog;
-import cz.rb.projectcommon.model.DogListMessage;
-import cz.rb.projectcommon.model.DogMessage;
+import cz.rb.projectcommon.model.dog.DogListMessage;
+import cz.rb.projectcommon.model.dog.DogMessage;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -19,6 +19,10 @@ public interface DogMapper {
      * @return The mapped Dog object
      */
     Dog toDog(DogEntity dogEntity);
+
+    DogEntity toDogEntity(DogMessage dog);
+
+    DogMessage toDogMessage(DogEntity dog);
 
     List<Dog> toDog(List<DogEntity> dogEntity);
 

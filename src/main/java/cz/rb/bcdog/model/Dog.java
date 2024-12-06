@@ -1,6 +1,6 @@
 package cz.rb.bcdog.model;
 
-import cz.rb.projectcommon.model.GenderEnum;
+import cz.rb.projectcommon.model.dog.GenderEnum;
 import lombok.*;
 
 @Builder
